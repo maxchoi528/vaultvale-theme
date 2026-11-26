@@ -1,0 +1,177 @@
+/*
+ * VaultVale Hearthwood — Companion Obsidian Theme by HearthCraft Lab
+ * Light: Warm Hearthwood Parchment | Dark: Subterranean Cavern Slate
+ * Pure Obsidian CSS variables, zero external assets, crisp editorial legibility.
+ */
+
+body {
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --radius-xl: 12px;
+  --border-width: 1px;
+  --checkbox-radius: 3px;
+  --tag-radius: 4px;
+  --tab-radius: 6px;
+  --tab-radius-active: 6px;
+  --file-line-width: 44rem;
+  --line-height-normal: 1.65;
+  --h1-size: 1.85em;
+  --h2-size: 1.45em;
+  --h3-size: 1.2em;
+  --h1-weight: 750;
+  --h2-weight: 700;
+  --h3-weight: 650;
+  --bold-weight: 650;
+}
+
+.theme-light {
+  color-scheme: light;
+  --background-primary: #f6efe2;
+  --background-primary-alt: #efe4cf;
+  --background-secondary: #ede0c8;
+  --background-secondary-alt: #e4d3b5;
+  --background-modifier-hover: rgba(110, 69, 43, 0.08);
+  --background-modifier-active-hover: rgba(61, 111, 54, 0.14);
+  --background-modifier-border: #d0ba95;
+  --background-modifier-border-hover: #b49363;
+  --background-modifier-border-focus: #3d6f36;
+  --background-modifier-form-field: #fbf6ec;
+  --background-modifier-cover: rgba(43, 27, 18, 0.42);
+
+  --text-normal: #291b12;
+  --text-muted: #694c38;
+  --text-faint: #8c6e58;
+  --text-on-accent: #fbf6ec;
+  --text-on-accent-inverted: #291b12;
+  --text-selection: rgba(61, 111, 54, 0.22);
+
+  --interactive-normal: #fbf6ec;
+  --interactive-hover: #efe4cf;
+  --interactive-accent: #3d6f36;
+  --interactive-accent-hsl: 113, 34%, 32%;
+  --interactive-accent-hover: #2f5929;
+
+  --h1-color: #291b12;
+  --h2-color: #3d2417;
+  --h3-color: #5c3824;
+  --h4-color: #3d6f36;
+  --link-color: #2f6b3e;
+  --link-color-hover: #214f2d;
+  --link-external-color: #9e5316;
+  --link-external-color-hover: #7c3f0e;
+
+  --tag-color: #2f5929;
+  --tag-background: #dfebd6;
+  --tag-border-color: #b7d0a6;
+  --tag-border-width: 1px;
+
+  --code-background: #ebe0ca;
+  --code-normal: #3d2417;
+  --blockquote-border-color: #b97e4a;
+  --blockquote-background-color: #f1e6d2;
+  --table-header-background: #e7d8bd;
+  --table-row-alt-background: #f2e8d6;
+
+  --caret-color: #3d6f36;
+  --scrollbar-bg: #efe4cf;
+  --scrollbar-thumb-bg: #c2a57b;
+  --scrollbar-active-thumb-bg: #8c653c;
+
+  --vv-frame-highlight: rgba(255, 252, 245, 0.65);
+  --vv-frame-shadow: rgba(61, 36, 23, 0.14);
+}
+
+.theme-dark {
+  color-scheme: dark;
+  --background-primary: #161e2b;
+  --background-primary-alt: #1b2536;
+  --background-secondary: #121824;
+  --background-secondary-alt: #0f141f;
+  --background-modifier-hover: rgba(56, 189, 248, 0.08);
+  --background-modifier-active-hover: rgba(56, 189, 248, 0.15);
+  --background-modifier-border: #2c3a52;
+  --background-modifier-border-hover: #415577;
+  --background-modifier-border-focus: #38bdf8;
+  --background-modifier-form-field: #1b2536;
+  --background-modifier-cover: rgba(9, 13, 20, 0.65);
+
+  --text-normal: #eee4d2;
+  --text-muted: #9eb0c7;
+  --text-faint: #6c7f99;
+  --text-on-accent: #0c1420;
+  --text-on-accent-inverted: #eee4d2;
+  --text-selection: rgba(56, 189, 248, 0.25);
+
+  --interactive-normal: #1e293b;
+  --interactive-hover: #26354d;
+  --interactive-accent: #38bdf8;
+  --interactive-accent-hsl: 199, 93%, 60%;
+  --interactive-accent-hover: #7dd3fc;
+
+  --h1-color: #f7efe0;
+  --h2-color: #f5c76b;
+  --h3-color: #7dd3fc;
+  --h4-color: #6ee7b7;
+  --link-color: #56ccf2;
+  --link-color-hover: #93e2fa;
+  --link-external-color: #f59e0b;
+  --link-external-color-hover: #fbbf24;
+
+  --tag-color: #7dd3fc;
+  --tag-background: #1b2f45;
+  --tag-border-color: #2f5173;
+  --tag-border-width: 1px;
+
+  --code-background: #111722;
+  --code-normal: #e2e8f0;
+  --blockquote-border-color: #f59e0b;
+  --blockquote-background-color: #1b2434;
+  --table-header-background: #1d283a;
+  --table-row-alt-background: #192232;
+
+  --caret-color: #fbbf24;
+  --scrollbar-bg: #121824;
+  --scrollbar-thumb-bg: #32435e;
+  --scrollbar-active-thumb-bg: #516b94;
+
+  --vv-frame-highlight: rgba(148, 163, 184, 0.08);
+  --vv-frame-shadow: rgba(6, 9, 15, 0.45);
+}
+
+/* Tactile hearthwood & cavern-slate bevel surfaces without breaking Obsidian layout */
+.markdown-rendered pre,
+.callout {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: inset 0 1px 0 var(--vv-frame-highlight), 0 1px 2px var(--vv-frame-shadow);
+}
+
+.markdown-rendered blockquote {
+  border-inline-start-width: 3px;
+  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  padding: 0.65rem 1rem;
+  background: var(--blockquote-background-color);
+}
+
+.markdown-rendered table {
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.markdown-rendered th {
+  background: var(--table-header-background);
+}
+
+.markdown-rendered tr:nth-child(even) td {
+  background: var(--table-row-alt-background);
+}
+
+.markdown-rendered input[type="checkbox"].task-list-item-checkbox {
+  border: 1.5px solid var(--background-modifier-border-hover);
+  box-shadow: inset 0 1px 0 var(--vv-frame-highlight);
+}
+
+.nav-file-title.is-active,
+.workspace-tab-header.is-active {
+  box-shadow: inset 0 1px 0 var(--vv-frame-highlight);
+}
