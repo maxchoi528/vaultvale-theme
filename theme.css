@@ -1,24 +1,24 @@
 /*
- * VaultVale Hearthwood — Companion Obsidian Theme by HearthCraft Lab
+ * VaultVale Hearthwood — 16-Bit Pixel Timber & Subterranean Slate Theme for Obsidian
  * Light: Warm Hearthwood Parchment | Dark: Subterranean Cavern Slate
- * Pure Obsidian CSS variables, zero external assets, crisp editorial legibility.
+ * Pure Obsidian CSS variables + offline inline crisp-pixel SVGs, zero external assets.
  */
 
 body {
-  --radius-s: 4px;
-  --radius-m: 6px;
-  --radius-l: 10px;
-  --radius-xl: 12px;
+  --radius-s: 0px;
+  --radius-m: 2px;
+  --radius-l: 2px;
+  --radius-xl: 3px;
   --border-width: 1px;
-  --checkbox-radius: 3px;
-  --tag-radius: 4px;
-  --tab-radius: 6px;
-  --tab-radius-active: 6px;
+  --checkbox-radius: 0px;
+  --tag-radius: 0px;
+  --tab-radius: 2px;
+  --tab-radius-active: 2px;
   --file-line-width: 44rem;
   --line-height-normal: 1.65;
-  --h1-size: 1.85em;
-  --h2-size: 1.45em;
-  --h3-size: 1.2em;
+  --h1-size: 1.8em;
+  --h2-size: 1.42em;
+  --h3-size: 1.18em;
   --h1-weight: 750;
   --h2-weight: 700;
   --h3-weight: 650;
@@ -29,15 +29,15 @@ body {
   color-scheme: light;
   --background-primary: #f6efe2;
   --background-primary-alt: #efe4cf;
-  --background-secondary: #ede0c8;
-  --background-secondary-alt: #e4d3b5;
-  --background-modifier-hover: rgba(110, 69, 43, 0.08);
+  --background-secondary: #eadbc1;
+  --background-secondary-alt: #dfc9a5;
+  --background-modifier-hover: rgba(110, 69, 43, 0.09);
   --background-modifier-active-hover: rgba(61, 111, 54, 0.14);
-  --background-modifier-border: #d0ba95;
-  --background-modifier-border-hover: #b49363;
+  --background-modifier-border: #c9ae84;
+  --background-modifier-border-hover: #9e7548;
   --background-modifier-border-focus: #3d6f36;
   --background-modifier-form-field: #fbf6ec;
-  --background-modifier-cover: rgba(43, 27, 18, 0.42);
+  --background-modifier-cover: rgba(43, 27, 18, 0.44);
 
   --text-normal: #291b12;
   --text-muted: #694c38;
@@ -61,16 +61,16 @@ body {
   --link-external-color: #9e5316;
   --link-external-color-hover: #7c3f0e;
 
-  --tag-color: #2f5929;
+  --tag-color: #284e23;
   --tag-background: #dfebd6;
-  --tag-border-color: #b7d0a6;
+  --tag-border-color: #9bbd88;
   --tag-border-width: 1px;
 
   --code-background: #ebe0ca;
   --code-normal: #3d2417;
   --blockquote-border-color: #b97e4a;
-  --blockquote-background-color: #f1e6d2;
-  --table-header-background: #e7d8bd;
+  --blockquote-background-color: #f0e4cd;
+  --table-header-background: #e3d1b2;
   --table-row-alt-background: #f2e8d6;
 
   --caret-color: #3d6f36;
@@ -78,23 +78,28 @@ body {
   --scrollbar-thumb-bg: #c2a57b;
   --scrollbar-active-thumb-bg: #8c653c;
 
-  --vv-frame-highlight: rgba(255, 252, 245, 0.65);
-  --vv-frame-shadow: rgba(61, 36, 23, 0.14);
+  --vv-frame-highlight: rgba(255, 252, 245, 0.72);
+  --vv-frame-shadow: rgba(61, 36, 23, 0.18);
+  --vv-pixel-shadow: #c2a173;
+  --vv-timber-cap: #b97e4a;
+  --vv-lantern-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' shape-rendering='crispEdges'%3E%3Crect x='4' y='1' width='4' height='1' fill='%235c3824'/%3E%3Crect x='3' y='2' width='6' height='1' fill='%238c5630'/%3E%3Crect x='3' y='3' width='1' height='6' fill='%235c3824'/%3E%3Crect x='8' y='3' width='1' height='6' fill='%235c3824'/%3E%3Crect x='4' y='3' width='4' height='6' fill='%23fde68a'/%3E%3Crect x='5' y='4' width='2' height='4' fill='%23f59e0b'/%3E%3Crect x='5' y='6' width='2' height='2' fill='%23ea580c'/%3E%3Crect x='3' y='9' width='6' height='2' fill='%235c3824'/%3E%3C/svg%3E");
+  --vv-section-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' shape-rendering='crispEdges'%3E%3Crect x='5' y='6' width='2' height='5' fill='%233d6f36'/%3E%3Crect x='2' y='4' width='3' height='2' fill='%23689d58'/%3E%3Crect x='7' y='3' width='3' height='2' fill='%2389b355'/%3E%3Crect x='5' y='2' width='2' height='2' fill='%23f59e0b'/%3E%3C/svg%3E");
+  --vv-check-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Crect x='2' y='5' width='1' height='2' fill='%23fbf6ec'/%3E%3Crect x='3' y='6' width='2' height='2' fill='%23fbf6ec'/%3E%3Crect x='5' y='4' width='1' height='2' fill='%23fbf6ec'/%3E%3Crect x='6' y='3' width='1' height='2' fill='%23fbf6ec'/%3E%3Crect x='7' y='2' width='1' height='2' fill='%23fbf6ec'/%3E%3C/svg%3E");
 }
 
 .theme-dark {
   color-scheme: dark;
   --background-primary: #161e2b;
   --background-primary-alt: #1b2536;
-  --background-secondary: #121824;
-  --background-secondary-alt: #0f141f;
-  --background-modifier-hover: rgba(56, 189, 248, 0.08);
-  --background-modifier-active-hover: rgba(56, 189, 248, 0.15);
+  --background-secondary: #111723;
+  --background-secondary-alt: #0d121c;
+  --background-modifier-hover: rgba(56, 189, 248, 0.09);
+  --background-modifier-active-hover: rgba(56, 189, 248, 0.16);
   --background-modifier-border: #2c3a52;
-  --background-modifier-border-hover: #415577;
+  --background-modifier-border-hover: #476087;
   --background-modifier-border-focus: #38bdf8;
   --background-modifier-form-field: #1b2536;
-  --background-modifier-cover: rgba(9, 13, 20, 0.65);
+  --background-modifier-cover: rgba(9, 13, 20, 0.68);
 
   --text-normal: #eee4d2;
   --text-muted: #9eb0c7;
@@ -119,59 +124,144 @@ body {
   --link-external-color-hover: #fbbf24;
 
   --tag-color: #7dd3fc;
-  --tag-background: #1b2f45;
-  --tag-border-color: #2f5173;
+  --tag-background: #182a3f;
+  --tag-border-color: #325980;
   --tag-border-width: 1px;
 
-  --code-background: #111722;
+  --code-background: #0f1520;
   --code-normal: #e2e8f0;
   --blockquote-border-color: #f59e0b;
   --blockquote-background-color: #1b2434;
-  --table-header-background: #1d283a;
+  --table-header-background: #1c283b;
   --table-row-alt-background: #192232;
 
   --caret-color: #fbbf24;
-  --scrollbar-bg: #121824;
+  --scrollbar-bg: #111723;
   --scrollbar-thumb-bg: #32435e;
   --scrollbar-active-thumb-bg: #516b94;
 
-  --vv-frame-highlight: rgba(148, 163, 184, 0.08);
-  --vv-frame-shadow: rgba(6, 9, 15, 0.45);
+  --vv-frame-highlight: rgba(148, 163, 184, 0.14);
+  --vv-frame-shadow: rgba(5, 8, 14, 0.65);
+  --vv-pixel-shadow: #0a0f18;
+  --vv-timber-cap: #f59e0b;
+  --vv-lantern-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' shape-rendering='crispEdges'%3E%3Crect x='4' y='1' width='4' height='1' fill='%23476087'/%3E%3Crect x='3' y='2' width='6' height='1' fill='%236c7f99'/%3E%3Crect x='3' y='3' width='1' height='6' fill='%23476087'/%3E%3Crect x='8' y='3' width='1' height='6' fill='%23476087'/%3E%3Crect x='4' y='3' width='4' height='6' fill='%23fef08a'/%3E%3Crect x='5' y='4' width='2' height='4' fill='%23fbbf24'/%3E%3Crect x='5' y='6' width='2' height='2' fill='%23f97316'/%3E%3Crect x='3' y='9' width='6' height='2' fill='%2332435e'/%3E%3C/svg%3E");
+  --vv-section-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' shape-rendering='crispEdges'%3E%3Crect x='5' y='2' width='2' height='8' fill='%2338bdf8'/%3E%3Crect x='4' y='4' width='4' height='5' fill='%237dd3fc'/%3E%3Crect x='2' y='6' width='2' height='4' fill='%230ea5e9'/%3E%3Crect x='8' y='5' width='2' height='5' fill='%232dd4bf'/%3E%3Crect x='5' y='3' width='1' height='2' fill='%23ffffff'/%3E%3C/svg%3E");
+  --vv-check-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' shape-rendering='crispEdges'%3E%3Crect x='2' y='5' width='1' height='2' fill='%230c1420'/%3E%3Crect x='3' y='6' width='2' height='2' fill='%230c1420'/%3E%3Crect x='5' y='4' width='1' height='2' fill='%230c1420'/%3E%3Crect x='6' y='3' width='1' height='2' fill='%230c1420'/%3E%3Crect x='7' y='2' width='1' height='2' fill='%230c1420'/%3E%3C/svg%3E");
 }
 
-/* Tactile hearthwood & cavern-slate bevel surfaces without breaking Obsidian layout */
+/* 16-bit Pixel Emblems for Headings */
+.markdown-rendered h1::before,
+.markdown-rendered h2::before {
+  content: "";
+  display: inline-block;
+  vertical-align: -2px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+}
+
+.markdown-rendered h1::before {
+  width: 0.92em;
+  height: 0.92em;
+  margin-inline-end: 0.36em;
+  background-image: var(--vv-lantern-icon);
+}
+
+.markdown-rendered h2::before {
+  width: 0.85em;
+  height: 0.85em;
+  margin-inline-end: 0.34em;
+  background-image: var(--vv-section-icon);
+}
+
+/* Stepped Hearthwood & Cavern-Slate Pixel Bevel Surfaces */
 .markdown-rendered pre,
 .callout {
-  border: 1px solid var(--background-modifier-border);
-  box-shadow: inset 0 1px 0 var(--vv-frame-highlight), 0 1px 2px var(--vv-frame-shadow);
+  border: 1px solid var(--background-modifier-border-hover);
+  box-shadow: 2px 2px 0 var(--vv-pixel-shadow), inset 0 1px 0 var(--vv-frame-highlight);
+}
+
+.callout {
+  border-inline-start: 4px solid var(--vv-timber-cap);
 }
 
 .markdown-rendered blockquote {
-  border-inline-start-width: 3px;
-  border-radius: 0 var(--radius-m) var(--radius-m) 0;
+  border: 1px solid var(--background-modifier-border);
+  border-inline-start: 4px solid var(--blockquote-border-color);
+  border-radius: 0;
   padding: 0.65rem 1rem;
   background: var(--blockquote-background-color);
+  box-shadow: 2px 2px 0 var(--vv-pixel-shadow), inset 0 1px 0 var(--vv-frame-highlight);
 }
 
+/* RPG Inventory Badge Tags */
+a.tag,
+.tag {
+  border-radius: 0;
+  box-shadow: 2px 2px 0 var(--vv-pixel-shadow);
+  font-weight: 600;
+}
+
+/* Crisp Pixel Horizon Divider */
+.markdown-rendered hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    90deg,
+    var(--background-modifier-border) 0 4px,
+    transparent 4px 8px
+  );
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+  margin: 1.5rem 0;
+}
+
+/* Tactile Tabular Tables */
 .markdown-rendered table {
   border-collapse: collapse;
   font-variant-numeric: tabular-nums;
+  border: 1px solid var(--background-modifier-border-hover);
+  box-shadow: 2px 2px 0 var(--vv-pixel-shadow);
 }
 
 .markdown-rendered th {
   background: var(--table-header-background);
+  border-bottom: 2px solid var(--background-modifier-border-hover);
 }
 
 .markdown-rendered tr:nth-child(even) td {
   background: var(--table-row-alt-background);
 }
 
+/* Crisp Stepped Pixel Task Checkboxes */
 .markdown-rendered input[type="checkbox"].task-list-item-checkbox {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  border-radius: 0;
   border: 1.5px solid var(--background-modifier-border-hover);
+  background-color: var(--background-modifier-form-field);
+  box-shadow: 1px 1px 0 var(--vv-pixel-shadow), inset 0 1px 0 var(--vv-frame-highlight);
+}
+
+.markdown-rendered input[type="checkbox"].task-list-item-checkbox:checked {
+  background-color: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  background-image: var(--vv-check-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+
+/* Active Sidebar & Tab Pixel Accent Bar */
+.nav-file-title.is-active,
+.workspace-tab-header.is-active {
+  border-inline-start: 3px solid var(--interactive-accent);
   box-shadow: inset 0 1px 0 var(--vv-frame-highlight);
 }
 
-.nav-file-title.is-active,
-.workspace-tab-header.is-active {
-  box-shadow: inset 0 1px 0 var(--vv-frame-highlight);
+button.mod-cta {
+  border-radius: 0;
+  box-shadow: 2px 2px 0 var(--vv-pixel-shadow);
 }
